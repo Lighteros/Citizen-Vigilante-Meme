@@ -3,7 +3,7 @@ const addressEl = document.getElementById('contract-address');
 
 if (copyBtn && addressEl) {
   const text = addressEl.textContent?.trim() ?? '';
-  const isPlaceholder = !text || text.includes('Coming Soon');
+  const isPlaceholder = !text || /coming\s*soon/i.test(text);
 
   if (!isPlaceholder) {
     copyBtn.disabled = false;

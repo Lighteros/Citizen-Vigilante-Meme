@@ -227,12 +227,17 @@ body {
   color: var(--vigil-white);
 }
 
-.hero-actions {
+.hero-actions,
+.buy-actions {
   display: flex;
   gap: 16px;
   justify-content: center;
   flex-wrap: wrap;
   margin-bottom: 32px;
+}
+
+.buy-actions {
+  margin-bottom: 24px;
 }
 
 .btn {
@@ -249,9 +254,11 @@ body {
   transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
 }
 
-.btn svg {
+.btn svg,
+.btn img {
   width: 20px;
   height: 20px;
+  flex-shrink: 0;
 }
 
 .btn-primary {
@@ -813,9 +820,12 @@ body {
   transition: background 0.2s, border-color 0.2s, color 0.2s;
 }
 
-.buy-social svg {
+.buy-social svg,
+.buy-social img,
+.footer-links img {
   width: 22px;
   height: 22px;
+  flex-shrink: 0;
 }
 
 .buy-social a:hover {
